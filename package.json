@@ -1,0 +1,54 @@
+{
+  "name": "joj-ai",
+  "version": "1.0.0",
+  "description": "jumpOverJump.com AI module",
+  "main": "dist/index.js",
+  "scripts": {
+    "postinstall": "typings install",
+    "pretest": "gulp js",
+    "mocha": "mocha ./dist/test",
+    "test": "nyc npm run mocha && nyc report --reporter=text-lcov > coverage.lcov && codecov --token=446534b0-9064-4a10-b14b-75bb25bade25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeloocana/joj-ai.git"
+  },
+  "keywords": [
+    "jump",
+    "Over",
+    "jumpOverJump",
+    "ai"
+  ],
+  "author": "angeloocana.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angeloocana/joj-ai/issues"
+  },
+  "homepage": "https://github.com/angeloocana/joj-ai#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "codecov": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-typescript": "^3.1.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "mocha-lcov-reporter": "^1.2.0",
+    "nyc": "^8.4.0",
+    "ptz-assert": "^1.0.7",
+    "typescript": "^2.0.8",
+    "typings": "^2.0.0"
+  },
+  "dependencies": {
+    "joj-core": "^1.5.0",
+    "ptz-assert": "^1.0.8",
+    "ptz-copy": "^1.0.1",
+    "ptz-math": "^1.0.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}
