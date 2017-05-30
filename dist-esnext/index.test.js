@@ -1,7 +1,6 @@
 import * as J from 'joj-core';
 import * as assert from 'ptz-assert';
 import * as Ai from './index';
-
 describe('Ai', () => {
     describe('getComputerMove', () => {
         it('Start as black', () => {
@@ -16,11 +15,10 @@ describe('Ai', () => {
                 [[6, 7], [5, 6], [6, 6], [7, 6]],
                 [[7, 7], [6, 6], [7, 6]]
             ]);
-
             const game = J.Game.createGame();
             const move = Ai.getComputerMove(game);
-
             assert.ok(J.Move.movesContains(allowedMoves, move));
         });
     });
 });
+//# sourceMappingURL=index.test.js.map
